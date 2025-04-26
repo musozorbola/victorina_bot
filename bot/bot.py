@@ -19,7 +19,7 @@ dp.include_router(handlers_router)
 
 
 async def main() -> None:
-    bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+    # bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
     bot = Bot(token=TOKEN, session=session)
     await menu.set_bot_menu(bot)
     await dp.start_polling(bot)
